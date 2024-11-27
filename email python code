@@ -1,0 +1,15 @@
+import smtplib
+
+
+
+my_email="sonusoni2835aa@gmail.com"
+password="cvnz epea dtih xlnm"
+
+connection=smtplib.SMTP("smtp.gmail.com")
+connection.starttls()
+connection.login(user=my_email,password=password)
+connection.sendmail(from_addr=my_email,to_addrs="sonikaaralihalli42@gmail.com",
+                    msg='''Subject:Feedback form\n\nHope you are doing well, kindly fill the feadback form
+                     https://forms.office.com/r/hY50qLp928 
+                     Thank you for spending your valuable time''')
+connection.close()
